@@ -104,6 +104,7 @@ client.on('message', async (message)=> {
         client.commands.get('gif').execute(message, args, cheerio, request);
         client.commands.get('rolesnatch').execute(message);
     } else if(command === 'image'){
+        
         client.commands.get('image').execute(message, args, cheerio, request);
     } else if(command === 'join'){
         client.emit('guildMemberAdd' , message.member);
