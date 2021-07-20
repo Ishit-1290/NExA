@@ -105,18 +105,6 @@ client.on('message', async (message)=> {
         client.commands.get('rolesnatch').execute(message);
     } else if(command === 'image'){
         client.commands.get('image').execute(message, args, cheerio, request);
-    } else if(command === 'memecreate'){
-        let meme_template = ['./meme_templates/1.jpg']
-
-        for(const file of meme_template)
-        {
-            message.channel.send(file.split('/')[2], {
-                files:[
-                    file,
-                ],
-            });
-        }
-        
     } else if(command === 'join'){
         client.emit('guildMemberAdd' , message.member);
     }
